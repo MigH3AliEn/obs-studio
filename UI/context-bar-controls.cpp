@@ -87,7 +87,8 @@ static int FillPropertyCombo(QComboBox *c, obs_property_t *p,
 		if (is_int) {
 			id = std::to_string(obs_property_list_item_int(p, i));
 		} else {
-			id = obs_property_list_item_string(p, i);
+			const char *val = obs_property_list_item_string(p, i);
+			id = val ? val : "";
 		}
 
 		if (cur_id == id)
@@ -227,6 +228,10 @@ void WindowCaptureToolbar::Init()
 	prop_name = "capture_window";
 #else
 	prop_name = "window";
+#endif
+
+#ifdef __APPLE__
+	is_int = true;
 #endif
 
 	ComboSelectToolbar::Init();
