@@ -267,20 +267,8 @@ QSlider::handle:horizontal[themeID="tBarSlider"] {
 }
 
 /* Source Context */
-#contextContainer {
-    margin: 0px;
-}
-
-#contextContainer QPushButton {
+#contextContainer QPushButton[themeID2=contextBarButton] {
     padding: 0px;
-}
-
-QPushButton#sourcePropertiesButton {
-    qproperty-icon: url(:/res/images/settings/general.svg);
-}
-
-QPushButton#sourceFiltersButton {
-    qproperty-icon: url(:/res/images/filter.svg);
 }
 
 /* Media icons */

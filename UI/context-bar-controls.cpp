@@ -608,7 +608,12 @@ TextSourceToolbar::TextSourceToolbar(QWidget *parent, OBSSource source)
 	color = color_from_int(val);
 
 	const char *text = obs_data_get_string(settings, "text");
-	ui->text->setPlainText(text);
+
+	bool single_line = !text || (strchr(text, '\n') == nullptr);
+	ui->emptySpace->setVisible(!single_line);
+	ui->text->setVisible(single_line);
+	if (single_line)
+		ui->text->setText(text);
 
 	obs_data_release(settings);
 }
@@ -697,7 +702,7 @@ void TextSourceToolbar::on_text_textChanged()
 
 	obs_data_t *settings = obs_data_create();
 	obs_data_set_string(settings, "text",
-			    QT_TO_UTF8(ui->text->toPlainText()));
+			    QT_TO_UTF8(ui->text->text()));
 	obs_source_update(source, settings);
 	obs_data_release(settings);
 }

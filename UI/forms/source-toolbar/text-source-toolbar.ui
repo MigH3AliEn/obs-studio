@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>726</width>
-    <height>71</height>
+    <height>49</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,7 +41,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPlainTextEdit" name="text">
+    <widget class="QWidget" name="emptySpace" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
        <horstretch>0</horstretch>
@@ -49,6 +49,9 @@
       </sizepolicy>
      </property>
     </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="text"/>
    </item>
   </layout>
  </widget>

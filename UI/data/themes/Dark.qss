@@ -221,21 +221,16 @@ QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal, QScrollBa
 }
 
 /* Source Context */
-#contextContainer {
-    margin: 0px;
-    padding: 0px;
-}
-
-#contextContainer QPushButton {
+#contextContainer QPushButton[themeID2=contextBarButton] {
     padding: 3px;
     margin: 0px;
 }
 
-QPushButton#sourcePropertiesButton {
+#contextContainer QPushButton#sourcePropertiesButton {
     qproperty-icon: url(./Dark/settings/general.svg);
 }
 
-QPushButton#sourceFiltersButton {
+#contextContainer QPushButton#sourceFiltersButton {
     qproperty-icon: url(./Dark/filter.svg);
 }
 

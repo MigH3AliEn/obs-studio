@@ -39,7 +39,10 @@
       <bool>true</bool>
      </property>
      <property name="themeID" stdset="0">
-      <string>refreshIconSmall</string>
+      <string notr="true">refreshIconSmall</string>
+     </property>
+     <property name="themeID2" stdset="0">
+      <string notr="true">contextBarButton</string>
      </property>
     </widget>
    </item>
