@@ -701,8 +701,7 @@ void TextSourceToolbar::on_text_textChanged()
 	}
 
 	obs_data_t *settings = obs_data_create();
-	obs_data_set_string(settings, "text",
-			    QT_TO_UTF8(ui->text->text()));
+	obs_data_set_string(settings, "text", QT_TO_UTF8(ui->text->text()));
 	obs_source_update(source, settings);
 	obs_data_release(settings);
 }

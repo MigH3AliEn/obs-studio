@@ -65,6 +65,7 @@ if(NOT Qt5Widgets_FOUND)
 	endif()
 endif()
 
+
 include_directories(${FFMPEG_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 include_directories(SYSTEM "obs-frontend-api")
@@ -362,7 +363,6 @@ set(obs_UI
 	forms/OBSUpdate.ui
 	forms/OBSRemux.ui
 	forms/OBSImporter.ui
-	forms/OBSAbout.ui
 	forms/OBSAbout.ui)
 
 set(obs_QRC

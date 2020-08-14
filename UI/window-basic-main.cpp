@@ -2908,7 +2908,8 @@ void OBSBasic::UpdateContextBar()
 			   strcmp(id, "coreaudio_input_capture") == 0 ||
 			   strcmp(id, "coreaudio_output_capture") == 0 ||
 			   strcmp(id, "pulse_input_capture") == 0 ||
-			   strcmp(id, "pulse_output_capture") == 0) {
+			   strcmp(id, "pulse_output_capture") == 0 ||
+			   strcmp(id, "alsa_input_capture") == 0) {
 			AudioCaptureToolbar *c =
 				new AudioCaptureToolbar(ui->emptySpace, source);
 			c->Init();
